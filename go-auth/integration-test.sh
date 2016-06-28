@@ -9,9 +9,10 @@ function quit {
 docker-compose up -d
 
 
+
 # Make sure containers are ready for the test
 sleep 20
-
+docker logs goauth_Goauth_1
 if [ "$(uname -s)" = "Darwin" ] ; then
 	service_ip=$(boot2docker ip)
 else 
